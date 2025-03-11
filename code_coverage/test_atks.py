@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from robustbench.utils import load_model  # nopep8
 from robustbench.utils import clean_accuracy  # nopep8
 from robustbench.data import load_cifar10  # nopep8
-import torchattacks  # nopep8
+import torchpatches  # nopep8
 import torch  # nopep8
 import pytest  # nopep8
 import time  # nopep8
@@ -27,7 +27,7 @@ def get_data(data_name='CIFAR10', device='cpu', n_examples=5, data_dir='./data')
 
 
 @torch.no_grad()
-@pytest.mark.parametrize('atk_class', [atk_class for atk_class in torchattacks.__all__ if atk_class not in torchattacks.__wrapper__])
+@pytest.mark.parametrize('atk_class', [atk_class for atk_class in torchpatches.__all__ if atk_class not in torchpatches.__wrapper__])
 def test_atks_on_cifar10(atk_class, device='cpu', n_examples=5, model_dir='./models', data_dir='./data'):
     global CACHE
     if CACHE.get('model') is None:

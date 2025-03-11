@@ -8,11 +8,11 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
 
 
 setuptools.setup(
-    name = 'torchattacks',
-    version = '3.5.1',
-    description='Torchattacks is a PyTorch library that provides adversarial attacks to generate adversarial examples.',
-    author = 'Harry Kim',
-    author_email='24k.harry@gmail.com',
+    name = 'torchpatches',
+    version = '0.1.1',
+    description='An adaptation of Torckattacks library for implementation of adversraial patch attacks.',
+    author = 'Hong Chul Nam',
+    author_email='bizoffermark@gmail.com',
     packages = setuptools.find_packages(),
     keyword = ['deeplearning', 'adversarial', 'attack', 'pytorch', 'torch',
                'rpgd', 'eotpgd', 'pgd', 'fgsm', 'cw', 'rfgsm', 'ifgsm', 'iterll',
@@ -26,7 +26,7 @@ setuptools.setup(
     python_requires = '>=3',
     zip_safe = False,
     license="MIT",
-    url = 'https://github.com/HarryK24/adversairal-attacks-pytorch',
+    url = 'https://github.com/bizoffermark/torchpatches',
     
     classifiers = [
     # How mature is this project? Common values are
